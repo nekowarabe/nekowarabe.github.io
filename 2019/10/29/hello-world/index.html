@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang=zh-TW>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Hello World 。 雖說原先累積了三頁左右的雜學，但因考量到幾年前的寫作方式與近乎照抄的內容，還是決定重來，果然大清除的時候對於不需要的東西要直接捨棄才好啊。 這次的 Blog 變動其實有想趁機改成用其它 Framework ，好比說 Hugo 、 Jekyll 這種，前者是 Go 語言寫的，優點是編譯速度非常快且我也比較熟悉；後者是 Ruby ，優點的話想不太到所以沒掙扎很久，雖然我有朋">
+<meta name="keywords" content="nekowarabe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello World">
+<meta property="og:url" content="https:&#x2F;&#x2F;nekowarabe.github.io&#x2F;2019&#x2F;10&#x2F;29&#x2F;hello-world&#x2F;index.html">
+<meta property="og:site_name" content="Neko In Boots">
+<meta property="og:description" content="Hello World 。 雖說原先累積了三頁左右的雜學，但因考量到幾年前的寫作方式與近乎照抄的內容，還是決定重來，果然大清除的時候對於不需要的東西要直接捨棄才好啊。 這次的 Blog 變動其實有想趁機改成用其它 Framework ，好比說 Hugo 、 Jekyll 這種，前者是 Go 語言寫的，優點是編譯速度非常快且我也比較熟悉；後者是 Ruby ，優點的話想不太到所以沒掙扎很久，雖然我有朋">
+<meta property="og:locale" content="zh-TW">
+<meta property="og:updated_time" content="2019-10-29T10:53:08.184Z">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Hello World</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><b><a href="/">首頁</a></b></li>
+         
+          <li><b><a href="/about/">關於</a></b></li>
+         
+          <li><b><a href="/archives/">雜學</a></b></li>
+         
+          <li><b><a href="/categories/">分類</a></b></li>
+         
+          <li><b><a href="/search/">搜尋</a></b></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">較新的</span>
+      <span id="i-next" class="info" style="display:none;">較舊的</span>
+      <span id="i-top" class="info" style="display:none;">回到開頭</span>
+      <span id="i-share" class="info" style="display:none;">分享</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://nekowarabe.github.io/2019/10/29/hello-world/" target="_blank" rel="noopener"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://nekowarabe.github.io/2019/10/29/hello-world/&text=Hello World" target="_blank" rel="noopener"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://nekowarabe.github.io/2019/10/29/hello-world/&title=Hello World" target="_blank" rel="noopener"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nekowarabe.github.io/2019/10/29/hello-world/&is_video=false&description=Hello World" target="_blank" rel="noopener"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Hello World&body=Check out this article: https://nekowarabe.github.io/2019/10/29/hello-world/" target="_blank" rel="noopener"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://nekowarabe.github.io/2019/10/29/hello-world/&title=Hello World" target="_blank" rel="noopener"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://nekowarabe.github.io/2019/10/29/hello-world/&title=Hello World" target="_blank" rel="noopener"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://nekowarabe.github.io/2019/10/29/hello-world/&title=Hello World" target="_blank" rel="noopener"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://nekowarabe.github.io/2019/10/29/hello-world/&title=Hello World" target="_blank" rel="noopener"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://nekowarabe.github.io/2019/10/29/hello-world/&name=Hello World&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hello-World-？"><span class="toc-number">1.</span> <span class="toc-text">Hello World ？</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Hello World
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Nekowarabe</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-10-29T10:10:22.000Z" itemprop="datePublished">2019-10-29</time>
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Hello World 。</p>
+<p>雖說原先累積了三頁左右的雜學，但因考量到幾年前的寫作方式與近乎照抄的內容，還是決定重來，果然大清除的時候對於不需要的東西要直接捨棄才好啊。</p>
+<p>這次的 Blog 變動其實有想趁機改成用其它 Framework ，好比說 Hugo 、 Jekyll 這種，前者是 Go 語言寫的，優點是編譯速度非常快且我也比較熟悉；後者是 Ruby ，優點的話想不太到所以沒掙扎很久，雖然我有朋友大力推薦這門語言，但對它一直沒感覺。</p>
+<p>但最終還是用 Hexo ，其一是想藉此學學放很久的前端技能，其二我真的蠻喜歡這個主題，想到換成別的又得重新找就覺得很累，以上。</p>
+<h2 id="Hello-World-？"><a href="#Hello-World-？" class="headerlink" title="Hello World ？"></a>Hello World ？</h2><p>原本是想就這樣結束，但又覺得啥東西都沒有也怪怪的，所以來補充個學程式語言時最常見的例子『 Hello World 』吧。</p>
+<p><strong>哈囉，世界</strong></p>
+<p>這個範例知名到 <a href="https://wikipedia.org/wiki/Hello_World" target="_blank" rel="noopener">Wiki</a> 有專門的頁面，就連日本在 2019-09-20 都上映了<a href="https://hello-world-movie.com/index.html" target="_blank" rel="noopener">同名電影</a>。</p>
+<p>依據 Wiki 中所述這是在 B 語言的文件《 A Tutorial Introduction to the Language B 》提到的例子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">main()&#123;</span><br><span class="line">  extrn a,b,c;</span><br><span class="line">  putchar(a); putchar(b); putchar(c); putchar(&apos;!*n&apos;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">a &apos;hell&apos;;</span><br><span class="line">b &apos;o, w&apos;;</span><br><span class="line">c &apos;orld&apos;;</span><br></pre></td></tr></table></figure>
+
+<p>這類程式例子的用意很單純，因為很簡單所以也很適合用來介紹語言特性，比如上面就能看到程式的某些特性。<br>而這位作者後來與他人開發知名的 C 語言，例子還是一樣的 Hello World ：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line">main()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"hello, world\n"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>有多少高手的第一個語言是 C 呢？絕對多到你數不清。</p>
+<p>所以根據人的惰性與習慣，這些人後來在撰寫教學文件時，第一個例子想到 Hello World 就一點也不奇怪了。</p>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>請開啟 JavaScript 功能來使用留言系統</noscript>
+        </div>
+    </div>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首頁</a></li>
+         
+          <li><a href="/about/">關於</a></li>
+         
+          <li><a href="/archives/">雜學</a></li>
+         
+          <li><a href="/categories/">分類</a></li>
+         
+          <li><a href="/search/">搜尋</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hello-World-？"><span class="toc-number">1.</span> <span class="toc-text">Hello World ？</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://nekowarabe.github.io/2019/10/29/hello-world/" target="_blank" rel="noopener"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://nekowarabe.github.io/2019/10/29/hello-world/&text=Hello World" target="_blank" rel="noopener"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://nekowarabe.github.io/2019/10/29/hello-world/&title=Hello World" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nekowarabe.github.io/2019/10/29/hello-world/&is_video=false&description=Hello World" target="_blank" rel="noopener"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Hello World&body=Check out this article: https://nekowarabe.github.io/2019/10/29/hello-world/" target="_blank" rel="noopener"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://nekowarabe.github.io/2019/10/29/hello-world/&title=Hello World" target="_blank" rel="noopener"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://nekowarabe.github.io/2019/10/29/hello-world/&title=Hello World" target="_blank" rel="noopener"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://nekowarabe.github.io/2019/10/29/hello-world/&title=Hello World" target="_blank" rel="noopener"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://nekowarabe.github.io/2019/10/29/hello-world/&title=Hello World" target="_blank" rel="noopener"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://nekowarabe.github.io/2019/10/29/hello-world/&name=Hello World&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 選單</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 段落</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 回到開頭</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 Nekowarabe
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首頁</a></li>
+         
+          <li><a href="/about/">關於</a></li>
+         
+          <li><a href="/archives/">雜學</a></li>
+         
+          <li><a href="/categories/">分類</a></li>
+         
+          <li><a href="/search/">搜尋</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<!-- clipboard -->
+
+  <script src="/lib/clipboard/clipboard.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"複製\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight .code pre").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      target: function(trigger) {
+        return trigger.nextElementSibling;
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Utterances Comments -->
+
+    <script>
+      (function(){
+        var comment = document.getElementById("utterances_thread");
+        if (comment != undefined) {
+          var utterances = document.createElement('script');
+          utterances.async = true;
+          utterances.type = 'text/javascript'
+          utterances.src = "https://utteranc.es/client.js";
+          utterances.crossOrigin = "anonymous";
+  
+          utterances.setAttribute("theme", "photon-dark");
+          utterances.setAttribute("repo", "nekowarabe/nekowarabe.github.io");
+          utterances.setAttribute("issue-term", "title");
+
+          comment.appendChild(utterances);
+        }
+      }());
+    </script>
+
+</body>
+</html>
