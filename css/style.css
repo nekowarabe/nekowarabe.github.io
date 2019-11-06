@@ -423,7 +423,10 @@ body table {
 }
 body th {
   padding: 8px;
-  border-bottom: 1px dashed #666;
+  border-bottom: 1px dashed;
+  border-top: 1px dashed #666;
+  border-left: 1px dashed #666;
+  border-right: 1px dashed #666;
   color: #eee;
   font-weight: bold;
   font-size: 13px;
@@ -431,6 +434,12 @@ body th {
 body td {
   padding: 9px 8px 0;
   border-bottom: none;
+}
+body td:not(.gutter):not(.code) {
+  padding: 9px 8px 9px 8px;
+  border-bottom: 1px dashed #666;
+  border-left: 1px dashed #666;
+  border-right: 1px dashed #666;
 }
 @font-face {
   font-style: normal;
@@ -1605,6 +1614,7 @@ code {
 }
 .highlight td.gutter {
   text-align: right;
+  color: #696969;
 }
 .highlight .line {
   height: 22px;
