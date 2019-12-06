@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang=zh-TW>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="狗屎爛詞系列專門介紹業界常使用的術語或名詞，但會以我所理解的概念去解釋，故無法保證正確性若有發現不理解或錯誤的部分請留言讓我知道，以便修正更改。 簡介介面（中國稱接口）屬於程式語言的一種特性，多數靜態語言都會有。 用專業點的說法是：「介面提供了抽象化的能力，可以隱藏底層的實作讓使用者專注於行為。」 介面是人們把「合約」或「規格」這種概念引入程式語言而產生，它本來就是我們生活中一項理所當然不過的事情">
+<meta name="keywords" content="nekowarabe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="狗屎爛詞 - Interface">
+<meta property="og:url" content="https:&#x2F;&#x2F;nekowarabe.github.io&#x2F;2019&#x2F;12&#x2F;05&#x2F;term-interface&#x2F;index.html">
+<meta property="og:site_name" content="Neko In Boots">
+<meta property="og:description" content="狗屎爛詞系列專門介紹業界常使用的術語或名詞，但會以我所理解的概念去解釋，故無法保證正確性若有發現不理解或錯誤的部分請留言讓我知道，以便修正更改。 簡介介面（中國稱接口）屬於程式語言的一種特性，多數靜態語言都會有。 用專業點的說法是：「介面提供了抽象化的能力，可以隱藏底層的實作讓使用者專注於行為。」 介面是人們把「合約」或「規格」這種概念引入程式語言而產生，它本來就是我們生活中一項理所當然不過的事情">
+<meta property="og:locale" content="zh-TW">
+<meta property="og:image" content="https:&#x2F;&#x2F;infographic.statista.com&#x2F;normal&#x2F;chartoftheday_13389_the_global_guide_to_plugging_in_n.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;nekowarabe.github.io&#x2F;2019&#x2F;12&#x2F;05&#x2F;term-interface&#x2F;plugin-example.jpg">
+<meta property="og:updated_time" content="2019-12-06T09:18:31.990Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;infographic.statista.com&#x2F;normal&#x2F;chartoftheday_13389_the_global_guide_to_plugging_in_n.jpg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>狗屎爛詞 - Interface</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><b><a href="/">首頁</a></b></li>
+         
+          <li><b><a href="/about/">關於</a></b></li>
+         
+          <li><b><a href="/archives/">雜學</a></b></li>
+         
+          <li><b><a href="/categories/">分類</a></b></li>
+         
+          <li><b><a href="/search/">搜尋</a></b></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2019/11/06/redis-intro-md/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">較新的</span>
+      <span id="i-next" class="info" style="display:none;">較舊的</span>
+      <span id="i-top" class="info" style="display:none;">回到開頭</span>
+      <span id="i-share" class="info" style="display:none;">分享</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://nekowarabe.github.io/2019/12/05/term-interface/" target="_blank" rel="noopener"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://nekowarabe.github.io/2019/12/05/term-interface/&text=狗屎爛詞 - Interface" target="_blank" rel="noopener"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://nekowarabe.github.io/2019/12/05/term-interface/&title=狗屎爛詞 - Interface" target="_blank" rel="noopener"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nekowarabe.github.io/2019/12/05/term-interface/&is_video=false&description=狗屎爛詞 - Interface" target="_blank" rel="noopener"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=狗屎爛詞 - Interface&body=Check out this article: https://nekowarabe.github.io/2019/12/05/term-interface/" target="_blank" rel="noopener"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://nekowarabe.github.io/2019/12/05/term-interface/&title=狗屎爛詞 - Interface" target="_blank" rel="noopener"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://nekowarabe.github.io/2019/12/05/term-interface/&title=狗屎爛詞 - Interface" target="_blank" rel="noopener"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://nekowarabe.github.io/2019/12/05/term-interface/&title=狗屎爛詞 - Interface" target="_blank" rel="noopener"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://nekowarabe.github.io/2019/12/05/term-interface/&title=狗屎爛詞 - Interface" target="_blank" rel="noopener"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://nekowarabe.github.io/2019/12/05/term-interface/&name=狗屎爛詞 - Interface&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#簡介"><span class="toc-number">1.</span> <span class="toc-text">簡介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#隱藏實作？"><span class="toc-number">2.</span> <span class="toc-text">隱藏實作？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#缺點"><span class="toc-number">2.1.</span> <span class="toc-text">缺點</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#介面的問題"><span class="toc-number">3.</span> <span class="toc-text">介面的問題</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#結論"><span class="toc-number">4.</span> <span class="toc-text">結論</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        狗屎爛詞 - Interface
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Nekowarabe</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-12-05T08:25:26.000Z" itemprop="datePublished">2019-12-05</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/%E7%A8%8B%E5%BC%8F/">程式</a> › <a class="category-link" href="/categories/%E7%A8%8B%E5%BC%8F/%E7%8B%97%E5%B1%8E%E7%88%9B%E8%A9%9E/">狗屎爛詞</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>狗屎爛詞系列專門介紹業界常使用的術語或名詞，但會以我所理解的概念去解釋，故無法保證正確性<br>若有發現不理解或錯誤的部分請留言讓我知道，以便修正更改。</p>
+<h2 id="簡介"><a href="#簡介" class="headerlink" title="簡介"></a>簡介</h2><p>介面（中國稱接口）屬於程式語言的一種特性，多數靜態語言都會有。</p>
+<p>用專業點的說法是：「介面提供了<strong>抽象化</strong>的能力，可以<strong>隱藏</strong>底層的實作讓使用者專注於行為。」</p>
+<p>介面是人們把「合約」或「規格」這種概念引入程式語言而產生，它本來就是我們生活中一項理所當然不過的事情，舉凡生活中處處可見的插座與插頭就是基於規格而生，下圖為 2018 的世界各地插座規格。</p>
+<p><a href="https://www.statista.com/chart/13389/the-global-guide-to-plugging-in/" target="_blank" rel="noopener" title="Infographic: The Global Guide To Plugging In  | Statista"><img src="https://infographic.statista.com/normal/chartoftheday_13389_the_global_guide_to_plugging_in_n.jpg" alt="Infographic: The Global Guide To Plugging In  | Statista" width="100%" height="auto" style="width: 100%; height: auto !important; max-width:960px;-ms-interpolation-mode: bicubic;"/></a></p>
+<p>台灣使用 Type-A 規格插座，這代表人在台灣只要有 Type-A 的插頭你就不怕用不了電。</p>
+<h2 id="隱藏實作？"><a href="#隱藏實作？" class="headerlink" title="隱藏實作？"></a>隱藏實作？</h2><p>Implemet （實作）指的是製造符合介面定義的產物，介面允許了我們使用產品時不必在乎產品是什麼，這也是介面最大的優點。</p>
+<p>假如現在要去英國，你會怎麼問插座的問題？</p>
+<ol>
+<li>「英國使用的是哪個廠商的插座？」</li>
+<li>「英國使用的是哪個 Type 的插座？」</li>
+</ol>
+<p>正常情況都會選擇 2 的方式問，畢竟誰會特地調查要玩的地方插座由哪些供應商提供？</p>
+<p>當有了規格，就很容易去應對會變化的未知，因為產品提供者不會只有一個，有時可能高達數百個。只要可以知道未知被侷限於某種限制，那就可以將其視為已知來應對，所以只要知道英國使用 Type-G 就可以只帶 Type-G 的轉接頭。</p>
+<p>這也是介面提供抽象化能力的意思，因為每個實作都可能會有不同之處，只不過遵照著特定規格時就代表它們一定提供規格所指定的功能，不會出現號稱實作 Type-A 的插座卻插不了 Type-A 插頭的狀況。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// SocketTypeA 規格 A 的插座</span></span><br><span class="line"><span class="keyword">type</span> SocketTypeA <span class="keyword">interface</span> &#123;</span><br><span class="line">    <span class="comment">// 規格為 A 的插座要能接受格式為 A 的插頭</span></span><br><span class="line">    Accept(plug PlugTypeA)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Jacky 供應商的插座實作 SocketTypeA 的介面（規格）</span></span><br><span class="line"><span class="keyword">type</span> JackySocket <span class="keyword">struct</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(socket JackySocket)</span> <span class="title">Accept</span><span class="params">(plug PlugTypeA)</span></span> &#123;</span><br><span class="line">    <span class="comment">// Jacky 自己的實作，與其它供應商不一定一致</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Neko 供應商的插座實作 SocketTypeA 的介面（規格）</span></span><br><span class="line"><span class="keyword">type</span> NekoSocket <span class="keyword">struct</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(socket NekoSocket)</span> <span class="title">Accept</span><span class="params">(plug PlugTypeA)</span></span> &#123;</span><br><span class="line">    <span class="comment">// Neko 自己的實作，與其它供應商不一定一致</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>所以不同團隊之間撰寫程式合作時，其實也能透過雙方約定好的介面來工作，這樣不論哪方都不必等另一方完成才能作業，介面讓工作於未知變得可行。（當然，最終在整合時出問題的機率還是有的）</p>
+<h3 id="缺點"><a href="#缺點" class="headerlink" title="缺點"></a>缺點</h3><p>隱藏實作還是會造成一點問題，例如下圖。</p>
+<p><img src="plugin-example.jpg" alt="插座例子"></p>
+<p>上面的插座雖然有差別，但都可以插入 Type-A 的插頭，只是廠商 A 可能只要 30 分鐘就能充飽；廠商 B 花 2 小時不到一半，還燒斷電路。</p>
+<p>因為實作被隱藏了，所以使用者在真正使用前無法得知結果是什麼，換句話說你可能插入插頭後發現：</p>
+<ul>
+<li>沒充電</li>
+<li>電路燒壞</li>
+<li>冒出火花</li>
+<li>其它</li>
+</ul>
+<p>因為沒人能跟我們保證實作的正確性，所以人們習慣使用知名廠商的產品，比起聽都沒聽過的多數人都會買像是 Apple 、 Google 等大公司的產品，也就是更重視實作。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Adder 提供加法的介面，確保一定有 Add 功能</span></span><br><span class="line"><span class="keyword">type</span> Adder <span class="keyword">interface</span> &#123;</span><br><span class="line">    Add(a, b <span class="keyword">int</span>) <span class="keyword">int</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 優秀的實作會盡可能減少使用的資源與未知問題</span></span><br><span class="line"><span class="keyword">type</span> Good <span class="keyword">struct</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(Good)</span> <span class="title">Add</span><span class="params">(a, b <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">    <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 糟糕的實作可能會有一堆詭異的狀況，甚至沒辦法保證結果會跟你預期的一致</span></span><br><span class="line"><span class="keyword">type</span> Bad <span class="keyword">struct</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(Bad)</span> <span class="title">Add</span><span class="params">(a, b <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">    doAdd = <span class="literal">true</span></span><br><span class="line">    a *= <span class="number">10</span></span><br><span class="line">    b *= <span class="number">10</span></span><br><span class="line">    tmp := (a + b) / <span class="number">10</span></span><br><span class="line">    cache[a][b] = tmp</span><br><span class="line">    <span class="keyword">return</span> tmp</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="介面的問題"><a href="#介面的問題" class="headerlink" title="介面的問題"></a>介面的問題</h2><p>介面可以將未知的變化侷限使得人可以應對，卻也導致了一件事情 ———— 介面太過穩定。</p>
+<p>等等，穩定難道不是一件好事嗎？</p>
+<p>當然是好事，穩定的系統才可能長久。只不過程式絕對不可能永遠穩定，正如一個系統永遠存在著變化一樣，這時介面可能會因變化造成難以想像的劇痛。</p>
+<p>假設未來有一種特殊的規格，可以提供最優秀的效率與最安全的防護，但與現在的所有插座、插頭都不一樣該怎麼辦？</p>
+<p>除了將現有的所有插座、插頭全都更改或銷毀以外沒有辦法，因為當初的介面已經定死規格，所以規格發生變化就會造成大量的改動，拿台灣 2300 萬人口來計算，最少也有 5 倍以上的插座與插頭存在，這是多可怕的數字應不用言喻。</p>
+<p>程式當然也是如此，如果有一個存在很久的介面：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Connector 必須提供 Connect 的功能</span></span><br><span class="line"><span class="keyword">type</span> Connector <span class="keyword">interface</span> &#123;</span><br><span class="line">    <span class="comment">// 依據給予的帳號與密碼取得連線</span></span><br><span class="line">    Connect(username <span class="keyword">string</span>, password <span class="keyword">string</span>) *Connect</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>有不少廠商們都依此介面提供自己的實作，結果有一天發現介面要增加功能：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Connector 必須提供 Connect 的功能</span></span><br><span class="line"><span class="keyword">type</span> Connector <span class="keyword">interface</span> &#123;</span><br><span class="line">    <span class="comment">// 依據給予的帳號與密碼取得連線</span></span><br><span class="line">    Connect(username <span class="keyword">string</span>, password <span class="keyword">string</span>) *Connect</span><br><span class="line">    <span class="comment">// 將傳入的連線解除連線狀態</span></span><br><span class="line">    Disconnect(conn *Connect) error</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我們先不討論這種改動和不合邏輯，當介面要加入新的功能或是方法就會造成<strong>所有</strong>實作毀壞，因為介面更改後原先的實作已不再符合規格。</p>
+<h2 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h2><p>介面是程式語言將現實的規格概念引入的特性，提供了在未知情況下依然可以作業的能力，因為實作被隱藏後就不再是重點，可以專注於介面規格上，但太過穩定的介面會難以改動。</p>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>請開啟 JavaScript 功能來使用留言系統</noscript>
+        </div>
+    </div>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首頁</a></li>
+         
+          <li><a href="/about/">關於</a></li>
+         
+          <li><a href="/archives/">雜學</a></li>
+         
+          <li><a href="/categories/">分類</a></li>
+         
+          <li><a href="/search/">搜尋</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#簡介"><span class="toc-number">1.</span> <span class="toc-text">簡介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#隱藏實作？"><span class="toc-number">2.</span> <span class="toc-text">隱藏實作？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#缺點"><span class="toc-number">2.1.</span> <span class="toc-text">缺點</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#介面的問題"><span class="toc-number">3.</span> <span class="toc-text">介面的問題</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#結論"><span class="toc-number">4.</span> <span class="toc-text">結論</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://nekowarabe.github.io/2019/12/05/term-interface/" target="_blank" rel="noopener"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://nekowarabe.github.io/2019/12/05/term-interface/&text=狗屎爛詞 - Interface" target="_blank" rel="noopener"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://nekowarabe.github.io/2019/12/05/term-interface/&title=狗屎爛詞 - Interface" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nekowarabe.github.io/2019/12/05/term-interface/&is_video=false&description=狗屎爛詞 - Interface" target="_blank" rel="noopener"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=狗屎爛詞 - Interface&body=Check out this article: https://nekowarabe.github.io/2019/12/05/term-interface/" target="_blank" rel="noopener"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://nekowarabe.github.io/2019/12/05/term-interface/&title=狗屎爛詞 - Interface" target="_blank" rel="noopener"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://nekowarabe.github.io/2019/12/05/term-interface/&title=狗屎爛詞 - Interface" target="_blank" rel="noopener"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://nekowarabe.github.io/2019/12/05/term-interface/&title=狗屎爛詞 - Interface" target="_blank" rel="noopener"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://nekowarabe.github.io/2019/12/05/term-interface/&title=狗屎爛詞 - Interface" target="_blank" rel="noopener"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://nekowarabe.github.io/2019/12/05/term-interface/&name=狗屎爛詞 - Interface&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 選單</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 段落</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 回到開頭</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 Nekowarabe
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首頁</a></li>
+         
+          <li><a href="/about/">關於</a></li>
+         
+          <li><a href="/archives/">雜學</a></li>
+         
+          <li><a href="/categories/">分類</a></li>
+         
+          <li><a href="/search/">搜尋</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<!-- clipboard -->
+
+  <script src="/lib/clipboard/clipboard.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"複製\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight .code pre").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      target: function(trigger) {
+        return trigger.nextElementSibling;
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Utterances Comments -->
+
+    <script>
+      (function(){
+        var comment = document.getElementById("utterances_thread");
+        if (comment != undefined) {
+          var utterances = document.createElement('script');
+          utterances.async = true;
+          utterances.type = 'text/javascript'
+          utterances.src = "https://utteranc.es/client.js";
+          utterances.crossOrigin = "anonymous";
+  
+          utterances.setAttribute("theme", "photon-dark");
+          utterances.setAttribute("repo", "nekowarabe/nekowarabe.github.io");
+          utterances.setAttribute("issue-term", "title");
+
+          comment.appendChild(utterances);
+        }
+      }());
+    </script>
+
+</body>
+</html>
