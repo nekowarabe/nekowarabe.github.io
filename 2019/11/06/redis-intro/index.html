@@ -10,11 +10,11 @@
 <meta name="keywords" content="淺入淺出,redis">
 <meta property="og:type" content="article">
 <meta property="og:title" content="淺入淺出 Redis">
-<meta property="og:url" content="https:&#x2F;&#x2F;nekowarabe.github.io&#x2F;2019&#x2F;11&#x2F;06&#x2F;redis-intro-md&#x2F;index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;nekowarabe.github.io&#x2F;2019&#x2F;11&#x2F;06&#x2F;redis-intro&#x2F;index.html">
 <meta property="og:site_name" content="Neko In Boots">
 <meta property="og:description" content="Redis 可謂是當前最知名的 In-memory Database ，常常被拿來當快取資料庫。 由 C 語言撰寫的 Redis 為鍵值對（ Key - Value ）資料庫，資料皆儲存於 Memory 所以讀寫的速度非常快，只不過這導致 Redis 若不小心關閉，所有資料會直接消失。因此它也提供可選的持久化設定，開啟的話可以在某種程度上避免資料遺失。 可以想成 Redis 是一個獨立於程式外的高">
 <meta property="og:locale" content="zh-TW">
-<meta property="og:updated_time" content="2019-11-06T14:19:06.341Z">
+<meta property="og:updated_time" content="2019-12-06T09:38:28.394Z">
 <meta name="twitter:card" content="summary">
     
     
@@ -89,16 +89,17 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://nekowarabe.github.io/2019/11/06/redis-intro-md/" target="_blank" rel="noopener"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://nekowarabe.github.io/2019/11/06/redis-intro-md/&text=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://nekowarabe.github.io/2019/11/06/redis-intro-md/&title=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nekowarabe.github.io/2019/11/06/redis-intro-md/&is_video=false&description=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=淺入淺出 Redis&body=Check out this article: https://nekowarabe.github.io/2019/11/06/redis-intro-md/" target="_blank" rel="noopener"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://nekowarabe.github.io/2019/11/06/redis-intro-md/&title=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://nekowarabe.github.io/2019/11/06/redis-intro-md/&title=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://nekowarabe.github.io/2019/11/06/redis-intro-md/&title=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://nekowarabe.github.io/2019/11/06/redis-intro-md/&title=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://nekowarabe.github.io/2019/11/06/redis-intro-md/&name=淺入淺出 Redis&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://nekowarabe.github.io/2019/11/06/redis-intro/" target="_blank" rel="noopener"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://nekowarabe.github.io/2019/11/06/redis-intro/&text=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://nekowarabe.github.io/2019/11/06/redis-intro/&title=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nekowarabe.github.io/2019/11/06/redis-intro/&is_video=false&description=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=淺入淺出 Redis&body=Check out this article: https://nekowarabe.github.io/2019/11/06/redis-intro/" target="_blank" rel="noopener"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://nekowarabe.github.io/2019/11/06/redis-intro/&title=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://nekowarabe.github.io/2019/11/06/redis-intro/&title=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://nekowarabe.github.io/2019/11/06/redis-intro/&title=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://nekowarabe.github.io/2019/11/06/redis-intro/&title=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://nekowarabe.github.io/2019/11/06/redis-intro/&name=淺入淺出 Redis&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://nekowarabe.github.io/2019/11/06/redis-intro/&t=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -436,16 +437,17 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://nekowarabe.github.io/2019/11/06/redis-intro-md/" target="_blank" rel="noopener"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://nekowarabe.github.io/2019/11/06/redis-intro-md/&text=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://nekowarabe.github.io/2019/11/06/redis-intro-md/&title=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nekowarabe.github.io/2019/11/06/redis-intro-md/&is_video=false&description=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=淺入淺出 Redis&body=Check out this article: https://nekowarabe.github.io/2019/11/06/redis-intro-md/" target="_blank" rel="noopener"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://nekowarabe.github.io/2019/11/06/redis-intro-md/&title=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://nekowarabe.github.io/2019/11/06/redis-intro-md/&title=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://nekowarabe.github.io/2019/11/06/redis-intro-md/&title=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://nekowarabe.github.io/2019/11/06/redis-intro-md/&title=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://nekowarabe.github.io/2019/11/06/redis-intro-md/&name=淺入淺出 Redis&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://nekowarabe.github.io/2019/11/06/redis-intro/" target="_blank" rel="noopener"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://nekowarabe.github.io/2019/11/06/redis-intro/&text=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://nekowarabe.github.io/2019/11/06/redis-intro/&title=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://nekowarabe.github.io/2019/11/06/redis-intro/&is_video=false&description=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=淺入淺出 Redis&body=Check out this article: https://nekowarabe.github.io/2019/11/06/redis-intro/" target="_blank" rel="noopener"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://nekowarabe.github.io/2019/11/06/redis-intro/&title=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://nekowarabe.github.io/2019/11/06/redis-intro/&title=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://nekowarabe.github.io/2019/11/06/redis-intro/&title=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://nekowarabe.github.io/2019/11/06/redis-intro/&title=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://nekowarabe.github.io/2019/11/06/redis-intro/&name=淺入淺出 Redis&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://nekowarabe.github.io/2019/11/06/redis-intro/&t=淺入淺出 Redis" target="_blank" rel="noopener"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -502,10 +504,10 @@
     btn += '<i class="far fa-clone"></i>';
     btn += '</span>'; 
     // mount it!
-    $(".highlight .code pre").before(btn);
+    $(".highlight table").before(btn);
     var clip = new ClipboardJS('.btn-copy', {
-      target: function(trigger) {
-        return trigger.nextElementSibling;
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
       }
     });
     clip.on('success', function(e) {

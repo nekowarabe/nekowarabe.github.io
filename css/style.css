@@ -351,10 +351,9 @@ body h4,
 body h5,
 body h6 {
   display: inline;
-  border-bottom: 1px dashed #ccc;
-  color: #ccc;
   text-decoration: none;
-  font-weight: normal;
+  color: #ccc;
+  font-weight: bold;
   font-size: 0.9rem;
 }
 body h3,
@@ -365,8 +364,11 @@ body h6 {
   margin-bottom: 0.5rem;
 }
 body hr {
-  border: 1px dashed #ccc;
+  border: 0.5px dashed #ccc;
+  opacity: 0.5;
   margin: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 body strong {
   font-weight: bold;
@@ -432,7 +434,7 @@ body th {
   font-size: 13px;
 }
 body td {
-  padding: 9px 8px 0;
+  padding: 0 8px;
   border-bottom: none;
 }
 body td:not(.gutter):not(.code) {
@@ -635,7 +637,8 @@ body {
 #header #nav ul li {
   display: inline-block;
   margin-right: 15px;
-  border-right: 1px dotted #2bbc8a;
+  border-right: 1px dotted;
+  border-color: #2bbc8a;
   vertical-align: middle;
 }
 #header #nav ul .icon {
@@ -1247,7 +1250,8 @@ article .content .caption {
 #footer li {
   display: inline-block;
   margin-right: 15px;
-  border-right: 1px solid #666;
+  border-right: 1px solid;
+  border-color: #666;
   vertical-align: middle;
 }
 #footer li a {
@@ -1605,6 +1609,7 @@ code {
   color: #2bbc8a;
 }
 .highlight pre {
+  margin: 0;
   padding: 0;
   border: none;
   background: none;
@@ -1614,7 +1619,7 @@ code {
 }
 .highlight td.gutter {
   text-align: right;
-  color: #696969;
+  opacity: 0.2;
 }
 .highlight .line {
   height: 22px;
